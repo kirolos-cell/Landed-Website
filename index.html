@@ -347,11 +347,100 @@
     .form-card { padding: 30px 18px; }
   }
 
+
+  /* ===== PRELOADER ===== */
+  #preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--navy-deep);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+  #preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .pre-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .pre-logo svg { width: 64px; height: 64px; }
+  .pre-l, .pre-g {
+    fill: none;
+    stroke: var(--taupe);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: drawStroke 1.2s ease forwards;
+  }
+  .pre-g { animation-delay: 0.3s; }
+  @keyframes drawStroke { to { stroke-dashoffset: 0; } }
+  .pre-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    opacity: 0;
+    animation: fadeInBrand 0.6s ease 0.8s forwards;
+  }
+  @keyframes fadeInBrand { to { opacity: 1; } }
+  .pre-name {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .pre-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--taupe);
+  }
+  .pre-bar-wrap {
+    width: 120px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin-top: 28px;
+    overflow: hidden;
+  }
+  .pre-bar {
+    height: 100%;
+    width: 0;
+    background: var(--taupe);
+    animation: barFill 1.4s ease 0.2s forwards;
+  }
+  @keyframes barFill { to { width: 100%; } }
+
 </style>
 </head>
 <body>
 
 <!-- PRELOADER -->
+<div id="preloader">
+  <div class="pre-logo">
+    <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="pre-l" d="M8 6 L8 36 L26 36 L26 30 L14 30 L14 6 Z"/>
+      <path class="pre-g" d="M28 10 A14 14 0 1 0 42 24 L42 22 L33 22 L33 28 L36 28 A8 8 0 1 1 28 16 Z"/>
+    </svg>
+    <div class="pre-brand">
+      <span class="pre-name">Landed</span>
+      <span class="pre-sub">Building Management</span>
+    </div>
+  </div>
+  <div class="pre-bar-wrap"><div class="pre-bar"></div></div>
+</div>
 
 
 <!-- NAV -->
@@ -631,6 +720,21 @@
 </footer>
 
 <script>
+  // Preloader
+  (function() {
+    function dismissPreloader() {
+      var pre = document.getElementById('preloader');
+      if (pre && !pre.classList.contains('hidden')) {
+        pre.classList.add('hidden');
+        setTimeout(function() { if (pre && pre.parentNode) pre.parentNode.removeChild(pre); }, 700);
+      }
+    }
+    // Hard max: always dismiss after 1.8s (animation is 1.4s + 0.4s buffer)
+    setTimeout(dismissPreloader, 1800);
+    // Also try on window load if it fires before 1.8s
+    window.addEventListener('load', function() { setTimeout(dismissPreloader, 400); });
+  })();
+
   // Navbar scroll effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
