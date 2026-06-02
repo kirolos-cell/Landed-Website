@@ -385,8 +385,7 @@
   .pre-bar-fill { height: 100%; width: 0; background: var(--taupe-light); animation: barFill 1.3s ease forwards 1.7s; }
   @keyframes barFill { to { width: 100%; } }
 
-  /* Prevent scroll while loading */
-  body.loading { overflow: hidden; }
+  /* Preloader visible, content hidden until loaded */
 
 
   @media (max-width: 480px) {
@@ -697,14 +696,18 @@
 
 <script>
   // Preloader
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const pre = document.getElementById('preloader');
-      if (pre) { pre.classList.add('hidden'); setTimeout(() => pre.remove(), 600); }
-    }, 600);
-  });
-
-  // Navbar scroll effect
+  wind// Preloader
+  function hidePreloader() {
+    const pre = document.getElementById('preloader');
+    document.body.classList.remove('loading');
+    if (pre) {
+      pre.classList.add('hidden');
+      setTimeout(() => { if (pre.parentNode) pre.parentNode.removeChild(pre); }, 600);
+    }
+  }
+  // Trigger on load, or after 3s max as a safety fallback
+  window.addEventListener('load', () => setTimeout(hidePreloader, 400));
+  setTimeout(hidePreloader, 3000);l effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
