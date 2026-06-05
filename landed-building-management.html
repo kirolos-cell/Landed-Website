@@ -862,10 +862,10 @@
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); observer.unobserve(e.target); } });
-  }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 200px 0px' });
   reveals.forEach(el => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+    if (rect.top < window.innerHeight + 300 && rect.bottom > 0) {
       el.classList.add('vis');
     } else {
       observer.observe(el);
