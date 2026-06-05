@@ -116,7 +116,7 @@
   .hamburger.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
 
   /* ===== HERO ===== */
-  #hero { position: relative; min-height: 76vh; display: flex; align-items: center; overflow: hidden; padding-top: 150px; padding-bottom: 90px; }
+  #hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding-top: 150px; padding-bottom: 90px; }
   .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 1; animation: heroZoom 16s ease-out forwards; }
   @keyframes heroZoom { from { transform: scale(1.08);} to {transform: scale(1);} }
   .hero-overlay { position: absolute; inset: 0; z-index: 2;
@@ -858,11 +858,20 @@
   });
 
   // Scroll reveal
+    setTimeout(() => {
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); observer.unobserve(e.target); } });
-  }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
-  reveals.forEach(el => observer.observe(el));
+  }, { threshold: 0, rootMargin: '0px 0px 200px 0px' });
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 300 && rect.bottom > 0) {
+      el.classList.add('vis');
+    } else {
+      observer.observe(el);
+    }
+  });
+  }, 2500);
 </script>
 </body>
 </html>
