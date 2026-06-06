@@ -5,20 +5,20 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI &amp; Building Management in Australia | Landed Group</title>
-<meta name="description" content="How AI will assist Australian building managers: optimising daily duties, faster response, predictive maintenance, energy and cost savings. A Landed Group feature.">
+<title>FAQs | Building Management &amp; Cleaning Melbourne | Landed Group</title>
+<meta name="description" content="Answers to common questions about building management, concierge and cleaning in Melbourne: what is included, how pricing works, after-hours support and how to get started with Landed Group. Free site assessment, no obligation.">
 <meta name="keywords" content="building management Melbourne, building management services, owners corporation building management, support for strata managers Melbourne, concierge services Melbourne, building cleaning Melbourne">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Landed Group">
-<link rel="canonical" href="https://landedgroupau.com/">
+<link rel="canonical" href="https://landedgroupau.com/faqs.html">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Building Management Melbourne | Landed Group">
+<meta property="og:title" content="FAQs | Building Management &amp; Cleaning Melbourne | Landed Group">
 <meta property="og:description" content="Melbourne building management, concierge and cleaning for owners corporations, strata managers and property portfolios. Local team, after-hours support, free site assessments.">
-<meta property="og:url" content="https://landedgroupau.com/">
+<meta property="og:url" content="https://landedgroupau.com/faqs.html">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Building Management Melbourne | Landed Group">
+<meta name="twitter:title" content="FAQs | Building Management &amp; Cleaning Melbourne | Landed Group">
 <meta name="twitter:description" content="Melbourne building management, concierge and cleaning for owners corporations, strata managers and property portfolios.">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18202148938"></script>
@@ -483,36 +483,64 @@
     .article-head { padding-left: 22px; }
   }
 
+
+  /* ===== FAQ PAGE ===== */
+  .faq-hero { background: var(--navy); position: relative; overflow: hidden; padding: 185px 0 95px; }
+  .faq-hero::before { content:''; position:absolute; top:-120px; right:-80px; width:420px; height:420px; border-radius:50%; background: radial-gradient(circle, rgba(148,138,129,0.14) 0%, transparent 70%); }
+  .faq-hero .wrap { position: relative; z-index: 2; }
+  .faq-hero .eyebrow-txt { color: var(--taupe-light); }
+  .faq-hero h1 { font-family:'Outfit',sans-serif; font-size: clamp(38px,5.4vw,62px); font-weight:700; color:#fff; letter-spacing:-1.5px; line-height:1.04; margin-top:6px; }
+  .faq-hero p { font-size:18px; font-weight:300; color:rgba(255,255,255,0.66); line-height:1.7; margin-top:22px; max-width:600px; }
+
+  #getstarted { background: var(--white); }
+  .steps-head { max-width:680px; margin-bottom:60px; position:relative; padding-left:30px; }
+  .steps-head::before { content:''; position:absolute; left:0; top:6px; bottom:18px; width:4px; background: linear-gradient(to bottom,var(--gold),transparent); border-radius:4px; }
+  .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .step-card { background:var(--off-white); border:1px solid var(--border); border-radius:4px; padding:44px 36px; position:relative; transition:all .4s ease; display:flex; flex-direction:column; }
+  .step-card:hover { background:#fff; transform:translateY(-6px); box-shadow:0 24px 56px rgba(16,28,42,0.1); border-color:transparent; }
+  .step-num { font-family:'Outfit',sans-serif; font-weight:800; font-size:56px; line-height:1; color:var(--navy); opacity:0.1; margin-bottom:16px; }
+  .step-title { font-size:22px; font-weight:600; color:var(--navy); margin-bottom:12px; line-height:1.2; }
+  .step-text { font-size:15px; font-weight:300; color:var(--text-body); line-height:1.75; }
+
+  #faqs { background: var(--light-bg); border-top:1px solid var(--border); }
+  .faq-group { margin-bottom:46px; }
+  .faq-group:last-child { margin-bottom:0; }
+  .faq-group-title { font-family:'Outfit',sans-serif; font-size:23px; font-weight:700; color:var(--navy); letter-spacing:-0.5px; margin:0 0 18px; padding-left:14px; border-left:4px solid var(--gold); }
+  .faq-list { display:flex; flex-direction:column; gap:14px; max-width:900px; }
+  .faq-item { background:#fff; border:1px solid var(--border); border-radius:4px; overflow:hidden; transition:box-shadow .3s, border-color .3s; }
+  .faq-item.open { box-shadow:0 14px 40px rgba(16,28,42,0.08); border-color:transparent; }
+  .faq-q { width:100%; background:none; border:none; cursor:pointer; text-align:left; padding:22px 26px; display:flex; align-items:center; justify-content:space-between; gap:20px; font-family:'Outfit',sans-serif; font-size:17px; font-weight:600; color:var(--navy); letter-spacing:-0.2px; line-height:1.35; transition:color .3s; }
+  .faq-q:hover { color:var(--taupe); }
+  .faq-icon { flex-shrink:0; width:22px; height:22px; position:relative; }
+  .faq-icon::before, .faq-icon::after { content:''; position:absolute; background:var(--taupe); border-radius:2px; transition:transform .3s ease, opacity .3s ease; }
+  .faq-icon::before { top:10px; left:0; width:22px; height:2px; }
+  .faq-icon::after { left:10px; top:0; width:2px; height:22px; }
+  .faq-item.open .faq-icon::after { transform:rotate(90deg); opacity:0; }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height .4s ease; }
+  .faq-a-inner { padding:0 26px 24px; font-size:15px; font-weight:300; color:var(--text-body); line-height:1.8; }
+  .faq-a-inner strong { font-weight:600; color:var(--navy); }
+
+  @media (max-width:760px){
+    .faq-hero { padding:140px 0 60px; }
+    .steps-grid { grid-template-columns:1fr; }
+    .steps-head { padding-left:22px; }
+    .faq-q { font-size:15.5px; padding:18px 20px; }
+    .faq-a-inner { padding:0 20px 20px; }
+  }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Landed Group",
-  "image": "https://landedgroupau.com/",
-  "url": "https://landedgroupau.com/",
-  "telephone": "+61403385125",
-  "email": "contact@landedgroupau.com",
-  "priceRange": "$$",
-  "description": "Melbourne building management, concierge and cleaning services for owners corporations, strata managers and property portfolios.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Melbourne",
-    "addressRegion": "VIC",
-    "addressCountry": "AU"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Melbourne" },
-    { "@type": "Place", "name": "Melbourne CBD" },
-    { "@type": "Place", "name": "Greater Melbourne suburbs" }
-  ],
-  "openingHours": "Mo-Su 00:00-24:00",
-  "knowsAbout": ["Building Management", "Owners Corporation Building Management", "Concierge Services", "Building Cleaning", "Property Operations"],
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Building Management" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concierge Services" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cleaning Services" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free Site Assessment" } }
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does a building manager actually do?", "acceptedAnswer": { "@type": "Answer", "text": "A building manager looks after the day-to-day operation of a property: coordinating maintenance and repairs, overseeing contractors and vendors, keeping common areas safe and well presented, staying on top of compliance, and responding when something goes wrong. The aim is to keep the building running smoothly and protect its long-term value." } },
+    { "@type": "Question", "name": "What is the difference between building management and owners corporation (strata) management?", "acceptedAnswer": { "@type": "Answer", "text": "Strata or owners corporation management covers the administrative and financial side, such as levies, meetings, insurance and by-laws. Building management is the hands-on, on-the-ground side: maintenance, cleaning, contractors and the physical upkeep of the building. Landed focuses on building management and works alongside your strata manager and committee." } },
+    { "@type": "Question", "name": "What areas of Melbourne do you service?", "acceptedAnswer": { "@type": "Answer", "text": "Landed is a local Melbourne team covering the CBD and surrounding suburbs. If you are unsure whether we cover your building, just ask." } },
+    { "@type": "Question", "name": "Do you offer after-hours and emergency support?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Building issues rarely keep to business hours, so we provide after-hours response so your building is never left without support when something urgent comes up." } },
+    { "@type": "Question", "name": "How much does building management cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on the size of your building and the services you need, which is why we start with a free, no-obligation proposal. After a conversation and a site assessment we provide a clear, tailored quote." } },
+    { "@type": "Question", "name": "Is the site assessment really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the site assessment is genuinely free and with no obligation. We come to your building, review it in person, and show you exactly what we would do before you commit to anything." } },
+    { "@type": "Question", "name": "What cleaning services do you provide?", "acceptedAnswer": { "@type": "Answer", "text": "Presentation-grade cleaning for every part of a building: common areas, lobbies and carparks, floor sweeping and mopping, window cleaning, rubbish chute maintenance, waste and bin management, and apartment cleaning." } },
+    { "@type": "Question", "name": "How do I get started with Landed?", "acceptedAnswer": { "@type": "Answer", "text": "Three steps: speak with our team about the services you need and receive a free, no-obligation proposal; we carry out a site assessment and onsite review; then we set up a go-live and transition plan so launch is seamless and daily operations run smoothly." } }
   ]
 }
 </script>
@@ -548,65 +576,153 @@
       <li><a href="index.html#services">Services</a></li>
       <li><a href="index.html#why">Why Us</a></li>
       <li><a href="index.html#about">About</a></li>
-      <li><a href="ai-and-bm.html" style="color:var(--gold)">AI and Building Management</a></li>
-      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="ai-and-bm.html">AI and Building Management</a></li>
+      <li><a href="faqs.html" style="color:var(--gold)">FAQs</a></li>
       <li><a href="index.html#contact" class="nav-cta">Request a Proposal<small>Enquire Now</small></a></li>
     </ul>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
-<!-- INSIGHT / FEATURE ARTICLE -->
-<section id="insight" class="section" style="padding-top:170px;">
+<!-- FAQ HERO -->
+<section class="faq-hero">
   <div class="wrap">
-    <div class="article-head reveal">
-      <span class="eyebrow"><span class="eyebrow-txt">The Future of Building Management</span></span>
-      <h2 class="sec-title">AI &amp; the building<br>manager of tomorrow</h2>
-      <p class="article-meta">Feature &bull; Landed Group Insight &bull; Melbourne, Australia</p>
+    <div class="reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">Frequently Asked Questions</span></span>
+      <h1>Building management &amp;<br>cleaning, explained</h1>
+      <p>Clear answers to what Melbourne owners corporations, strata managers and committees ask us most, covering building management, concierge and cleaning, and exactly how working with Landed begins.</p>
     </div>
-
-    <article class="article-body reveal rd1">
-      <p class="article-lead">Australian building management is being quietly reshaped by artificial intelligence. Not the science-fiction version, but practical tools that handle the routine, flag problems early, and free managers to do the work that actually needs a human. Here is how we see it changing the day-to-day across Melbourne and beyond.</p>
-
-      <h3 class="article-h">A market already leaning into technology</h3>
-      <p>The Australian facility management sector is substantial and growing. IBISWorld put the facilities management services market at roughly <strong>$12.0 billion in 2025</strong>, while longer-range forecasts from IMARC Group expect the broader market to more than double, reaching about <strong>USD $1.3 billion in the specialist segment by 2033 at a 7.3% annual growth rate</strong>, with the Internet of Things, AI and building information modelling named as core drivers. The direction of travel is clear: technology is no longer a nice-to-have in Australian buildings, it is becoming the baseline expectation, especially across premium commercial stock in precincts like Melbourne's Docklands and Sydney's Barangaroo.</p>
-
-      <h3 class="article-h">Optimising the day-to-day</h3>
-      <p>The bulk of a building manager's week is routine: logging maintenance requests, chasing contractors, scheduling servicing, and keeping records compliant. These are exactly the tasks AI handles well. Smart building platforms can already triage incoming requests, auto-schedule recurring servicing, and keep digital asset registers current without manual entry. Industry adoption backs this up, with reporting that over <strong>91% of commercial building organisations now use some form of smart building technology</strong>. For a manager, that means less time on administration and more time on the residents, committees and tenants who need genuine attention.</p>
-
-      <h3 class="article-h">Faster help, around the clock</h3>
-      <p>One of the clearest wins is speed of response. AI-assisted systems can acknowledge a fault, dispatch the right contractor, and keep stakeholders updated automatically, at any hour. This matters in Australia, where the workforce is stretched. Jobs and Skills Australia's <strong>2025 Occupation Shortage List found 29% of occupations in national shortage</strong>, with professional and trade roles in construction among the hardest to fill. When you cannot simply hire your way out of demand, tools that compress response times become essential rather than optional. The goal is simple: help that arrives faster, regardless of the time of day.</p>
-
-      <h3 class="article-h">Predicting problems before they happen</h3>
-      <p>This is where AI genuinely changes the game. Traditional maintenance is either reactive (fix it when it breaks) or scheduled (service it on a calendar). Predictive maintenance uses live sensor data and machine learning to spot the early signatures of failure, before a manager would ever notice. Research into Australian commercial buildings found that <strong>predictive maintenance can deliver up to 50% fewer breakdowns</strong>, keeping operations running smoothly. For high-traffic buildings, catching a failing HVAC compressor or a struggling lift motor before it fails avoids both the disruption and the premium cost of an emergency call-out.</p>
-
-      <h3 class="article-h">Real cost and energy savings</h3>
-      <p>The financial case is strongest around energy. According to the Australian Government's energy.gov.au, <strong>HVAC accounts for around 40% of a typical office building's total energy use, and up to 70% of base building energy use</strong>, dominating peak electricity demand. AI-driven controls that tune heating, ventilation and cooling to real occupancy and weather conditions directly attack the building's single largest controllable cost. Better energy performance also lifts a building's NABERS rating, which increasingly influences leasing decisions, particularly as the National Construction Code 2025 pushes Australian buildings toward net-zero pathways. Lower bills, fewer emergency repairs, and a more attractive asset is a combination owners corporations notice.</p>
-
-      <h3 class="article-h">Better general upkeep</h3>
-      <p>Beyond the big-ticket systems, AI quietly raises the standard of everyday presentation. Sensor data can flag when common areas need attention, when consumables are running low, or when cleaning schedules should flex to actual usage rather than a fixed roster. The result is a building that simply feels better looked-after, consistently, without the manager having to be everywhere at once.</p>
-
-      <h3 class="article-h">Where Landed stands</h3>
-      <p>We do not see AI replacing the building manager. We see it removing the busywork so the manager can focus on judgement, relationships and the things that genuinely require a person. Our view is that the best-run Australian buildings of the next decade will pair smart technology with a local, hands-on team that still picks up the phone. That is exactly the balance we are building toward.</p>
-
-      <p class="article-sources"><strong>Sources:</strong> IBISWorld (Facilities Management Services in Australia, 2025); IMARC Group (Australia Facility Management Market 2025&ndash;2033); Australian Government energy.gov.au (HVAC energy breakdown); Jobs and Skills Australia (2025 Occupation Shortage List); research on predictive maintenance in Australian commercial buildings (ResearchGate, 2025); Green Building Council Australia / NABERS. Figures are accurate as at time of writing and provided for general information only.</p>
-    </article>
   </div>
 </section>
 
+<!-- HOW TO GET STARTED -->
+<section id="getstarted" class="section">
+  <div class="wrap">
+    <div class="steps-head reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">Getting Started</span></span>
+      <h2 class="sec-title">How to get started</h2>
+      <p class="sec-lead">Three simple steps from first conversation to a smoothly running building, with a free, no-obligation proposal before you commit to anything.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Tell us what you need</h3>
+        <p class="step-text">Speak with our team about the services your building requires. We explore the options that genuinely fit your property and put together a free proposal, at no cost and no obligation.</p>
+      </div>
+      <div class="step-card reveal rd1">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Site assessment &amp; onsite review</h3>
+        <p class="step-text">We visit your building in person to understand it properly, including its common areas, systems and day-to-day needs, so every recommendation is based on your actual property, not a template.</p>
+      </div>
+      <div class="step-card reveal rd2">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Go-live &amp; transition plan</h3>
+        <p class="step-text">When you are ready, we set up a clear go-live and transition plan and coordinate the handover, so launch is seamless and daily operations run smoothly from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- FAQ ACCORDIONS -->
+<section id="faqs" class="section">
+  <div class="wrap">
+    <div class="steps-head reveal" style="margin-bottom:48px;">
+      <span class="eyebrow"><span class="eyebrow-txt">Common Questions</span></span>
+      <h2 class="sec-title">Your questions, answered</h2>
+    </div>
 
-<!-- ARTICLE CTA -->
+    <div class="faq-group reveal">
+      <h3 class="faq-group-title">Building Management &amp; General</h3>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What does a building manager actually do?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">A building manager looks after the day-to-day operation of a property so residents, tenants and committees do not have to. That covers coordinating maintenance and repairs, overseeing contractors and vendors, keeping common areas safe and well presented, staying on top of compliance, and responding when something goes wrong. In short, we keep the building running smoothly and protect its long-term value.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What is the difference between building management and owners corporation (strata) management?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner"><strong>Strata or owners corporation management</strong> covers the administrative and financial side: levies, meetings, insurance, by-laws and the corporation&rsquo;s legal obligations. <strong>Building management</strong> is the hands-on, on-the-ground side: maintenance, cleaning, contractors and the physical upkeep of the building. We focus on building management and work alongside your strata manager and committee, not in place of them.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Who do you work with?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">We work with owners corporations, strata managers, building committees and private property owners across Melbourne, from individual residential and commercial buildings to larger property portfolios.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What areas of Melbourne do you service?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">We are a local Melbourne team covering the CBD and surrounding suburbs. If you are unsure whether we cover your building, just ask, and we are happy to let you know.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you offer after-hours and emergency support?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Building issues rarely keep to business hours, so we provide after-hours response, so your building is never left without support when something urgent comes up.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can services be tailored to my building?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Absolutely. Every building is different, so we do not force a one-size-fits-all package. After reviewing your property we build a scope around what it actually needs, whether that is full-scope management, concierge, cleaning, or a specific combination.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How do you handle maintenance and contractors?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">We plan preventative maintenance, coordinate trusted contractors and vendors, and oversee the work through to completion, so jobs are done properly, on time and at a fair price, without committees having to chase anyone.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How much does building management cost?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Pricing depends on the size of your building and the services you need, which is exactly why we start with a free, no-obligation proposal. After a quick conversation and a site assessment we give you a clear, tailored quote, with no surprises.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Is the site assessment really free?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes, genuinely free and with no obligation. We come to your building, review it in person, and show you exactly what we would do before you commit to anything.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group reveal">
+      <h3 class="faq-group-title">Cleaning Services</h3>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What cleaning services do you provide?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Presentation-grade cleaning for every part of a building: common areas, lobbies and carparks, floor sweeping and mopping, window cleaning, rubbish chute maintenance, waste and bin management, and apartment cleaning. The goal is a building that consistently looks and feels well cared-for.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How often are common areas cleaned?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">As often as your building needs. We set a schedule around how your spaces are actually used and the standard you want to maintain, and we can flex it up or down rather than locking you into a rigid roster.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you manage waste, bins and rubbish chutes?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Waste and bin management and rubbish chute maintenance are part of what we do, keeping waste areas clean, orderly and hygienic, which is one of the most common pain points in residential buildings.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can cleaning be combined with building management?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">It can, and many clients prefer it that way. Having cleaning and building management under one local team means better coordination, a single point of contact, and a consistent standard across the whole building.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you clean individual apartments?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Alongside common-area cleaning we also offer apartment cleaning, which is useful for turnovers, move-ins, and owners who want their unit kept to the same standard as the rest of the building.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="section" style="background:var(--navy); padding:80px 0;">
   <div class="wrap" style="text-align:center;">
-    <h2 class="sec-title" style="color:#fff; margin-bottom:18px;">Building management,<br>done properly.</h2>
-    <p style="color:rgba(255,255,255,0.6); font-weight:300; max-width:520px; margin:0 auto 32px; font-size:17px;">Want a local Melbourne team that pairs smart systems with a genuine personal service? Let's talk about your building.</p>
+    <h2 class="sec-title" style="color:#fff; margin-bottom:18px;">Still have a question?</h2>
+    <p style="color:rgba(255,255,255,0.6); font-weight:300; max-width:520px; margin:0 auto 32px; font-size:17px;">Talk to a local Melbourne team that actually picks up the phone. We will answer it and, if you would like, prepare a free proposal for your building.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
       <a href="index.html#contact" class="btn-primary">Request a Proposal <span>&rarr;</span></a>
-      <a href="tel:0403385125" class="btn-ghost"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16" style="margin-right:4px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>Call 0403 385 125</a>
+      <a href="tel:0403385125" class="btn-ghost">Call 0403 385 125</a>
     </div>
   </div>
 </section>
 
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var ans = item.querySelector('.faq-a');
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      ans.style.maxHeight = isOpen ? (ans.scrollHeight + 'px') : null;
+    });
+  });
+</script>
 <footer>
   <div class="wrap">
     <div class="footer-top">
