@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjEwIiBmaWxsPSIjMTAxYzJhIi8+CjxwYXRoIGQ9Ik0xNiAxNCBMMTYgNDYgTDQwIDQ2IEw0MCAzOCBMMjQgMzggTDI0IDE0IFoiIGZpbGw9IiNmZmZmZmYiLz4KPHBhdGggZD0iTTQwIDE3IEExNiAxNiAwIDEgMCA1MiAzMyBMNTIgMzAgTDQyIDMwIEw0MiAzOCBMNDYgMzggQTkgOSAwIDEgMSA0MCAyNCBaIiBmaWxsPSIjYjVhYmEyIi8+Cjwvc3ZnPg==">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjEwIiBmaWxsPSIjMTAxYzJhIi8+CjxwYXRoIGQ9Ik0xNiAxNCBMMTYgNDYgTDQwIDQ2IEw0MCAzOCBMMjQgMzggTDI0IDE0IFoiIGZpbGw9IiNmZmZmZmYiLz4KPHBhdGggZD0iTTQwIDE3IEExNiAxNiAwIDEgMCA1MiAzMyBMNTIgMzAgTDQyIDMwIEw0MiAzOCBMNDYgMzggQTkgOSAwIDEgMSA0MCAyNCBaIiBmaWxsPSIjYjVhYmEyIi8+Cjwvc3ZnPg==">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Building Management Melbourne | Landed Group</title>
 <meta name="description" content="Melbourne building management, concierge and cleaning for owners corporations, strata managers and property portfolios. Local team, after-hours support, free site assessments. Call 0403 385 125.">
@@ -93,8 +95,8 @@
   .logo-name { font-family:'Outfit', sans-serif; font-weight: 600; font-size: 27px; letter-spacing: 3px; color: var(--white); text-transform: uppercase; }
   .logo-sub { font-weight: 400; font-size: 11px; letter-spacing: 3.5px; color: var(--taupe-light); text-transform: uppercase; margin-top: 6px; }
 
-  .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
-  .nav-links a { text-decoration: none; color: rgba(255,255,255,0.82); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; transition: color 0.3s; position: relative; }
+  .nav-links { display: flex; align-items: center; gap: 20px; list-style: none; }
+  .nav-links a { text-decoration: none; color: rgba(255,255,255,0.82); font-size: 14px; font-weight: 600; letter-spacing: 0.5px; transition: color 0.3s; position: relative; }
   .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-5px; left:0; right:0; height:1.5px; background: var(--taupe-light); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
   .nav-links a:not(.nav-cta):hover { color: #fff; }
   .nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
@@ -116,7 +118,7 @@
   .hamburger.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
 
   /* ===== HERO ===== */
-  #hero { position: relative; min-height: 85vh; display: flex; align-items: center; overflow: hidden; padding-top: 150px; padding-bottom: 90px; }
+  #hero { position: relative; min-height: 76vh; display: flex; align-items: center; overflow: hidden; padding-top: 150px; padding-bottom: 90px; }
   .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 1; animation: heroZoom 16s ease-out forwards; }
   @keyframes heroZoom { from { transform: scale(1.08);} to {transform: scale(1);} }
   .hero-overlay { position: absolute; inset: 0; z-index: 2;
@@ -632,11 +634,11 @@
         <ul class="svc-list">
           <li>Apartment cleaning</li>
           <li>Floor sweeping &amp; mopping</li>
-          <li>Window cleaning</li>
+          <li>Commercial &amp; retail cleaning</li>
           <li>Common area cleaning</li>
           <li>Carpark &amp; lobby upkeep</li>
           <li>Rubbish chute maintenance</li>
-          <li>Waste &amp; bin management</li>
+          <li>Full building daily maintenance &amp; deep cleans</li>
         </ul>
         <a href="#contact" class="svc-link">Enquire about this service &rarr;</a>
       </div>
@@ -858,20 +860,11 @@
   });
 
   // Scroll reveal
-    setTimeout(() => {
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); observer.unobserve(e.target); } });
-  }, { threshold: 0, rootMargin: '0px 0px 200px 0px' });
-  reveals.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight + 300 && rect.bottom > 0) {
-      el.classList.add('vis');
-    } else {
-      observer.observe(el);
-    }
-  });
-  }, 2500);
+  }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
+  reveals.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
