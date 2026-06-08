@@ -266,6 +266,8 @@
   .hero-form-card label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.4px; color: var(--navy); margin-bottom: 6px; }
   .hero-form-card input { width: 100%; background: var(--off-white); border: 1.5px solid var(--border); padding: 13px 15px; font-family: 'Inter', sans-serif; font-size: 16px; color: var(--navy); border-radius: 2px; outline: none; transition: all 0.3s; }
   .hero-form-card input:focus { border-color: var(--navy); background: #fff; box-shadow: 0 0 0 3px rgba(16,28,42,0.05); }
+  .hero-form-card textarea { width: 100%; background: var(--off-white); border: 1.5px solid var(--border); padding: 13px 15px; font-family: 'Inter', sans-serif; font-size: 16px; color: var(--navy); border-radius: 2px; outline: none; transition: all 0.3s; min-height: 90px; resize: vertical; line-height: 1.5; }
+  .hero-form-card textarea:focus { border-color: var(--navy); background: #fff; box-shadow: 0 0 0 3px rgba(16,28,42,0.05); }
   .hero-form-card .btn-submit { margin-top: 6px; }
   .hfc-note { text-align: center; font-size: 13px; color: var(--text-body); margin-top: 14px; }
   .hfc-note a { color: var(--navy); font-weight: 600; text-decoration: none; }
@@ -628,6 +630,7 @@
         <div class="fg"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required></div>
         <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="Best contact number" required></div>
         <div class="fg"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+        <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us about your building or enquiry..." required></textarea></div>
         <button type="submit" class="btn-submit"><span>Request my callback &rarr;</span></button>
         <p class="hfc-note">Prefer to talk now? <a href="tel:0403385125">Call 0403 385 125</a></p>
       </form>
