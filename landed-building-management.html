@@ -208,8 +208,8 @@
   .svc-list { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 0; }
   .svc-list li { font-size: 13.5px; color: var(--text-body); padding: 8px 0; display: flex; align-items: center; gap: 10px; }
   .svc-list li::before { content:''; width: 5px; height: 5px; border-radius: 50%; background: var(--taupe); flex-shrink: 0; }
-  .svc-link { font-size: 13px; font-weight: 600; letter-spacing: 0.5px; color: var(--navy); text-decoration: none; display: inline-flex; align-items: center; gap: 9px; transition: gap 0.3s, color 0.3s; margin-top: auto; }
-  .svc-link:hover { gap: 15px; color: var(--taupe); }
+  .svc-link { background: var(--taupe); color: #fff; padding: 13px 20px; border-radius: 3px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 9px; transition: all 0.3s ease; margin-top: auto; }
+  .svc-link:hover { background: var(--taupe-light); gap: 13px; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(148,138,129,0.4); }
 
   /* ===== WHY US ===== */
   #why { background: var(--light-bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
