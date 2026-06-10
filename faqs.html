@@ -305,6 +305,10 @@
   footer { background: var(--navy-deep); padding: 66px 0 34px; border-top: 2px solid var(--taupe); }
   .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 50px; margin-bottom: 52px; }
   .footer-brand p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.8; margin-top: 20px; max-width: 290px; }
+  .footer-social { margin-top: 22px; display: flex; gap: 12px; align-items: center; }
+  .footer-social .social-label { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+  .social-btn { width: 42px; height: 42px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--taupe-light); border: 1px solid rgba(181,171,162,0.3); background: rgba(255,255,255,0.04); transition: all 0.3s ease; }
+  .social-btn:hover { background: var(--taupe); color: #fff; border-color: var(--taupe); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(148,138,129,0.4); }
   .footer-col-t { font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--taupe-light); margin-bottom: 22px; }
   .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .footer-links a { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s; }
@@ -794,6 +798,10 @@
           <span class="logo-text-wrap"><span class="logo-name" style="font-size:17px">Landed</span><span class="logo-sub" style="font-size:8px">Building Management</span></span>
         </a>
         <p>Premium building management and concierge services for Melbourne's finest commercial and residential properties, delivered with a personal touch.</p>
+        <div class="footer-social">
+          <span class="social-label">Follow us</span>
+          <a href="https://www.linkedin.com/company/landed-group-pty-ltd/" target="_blank" rel="noopener" aria-label="Follow Landed on LinkedIn" class="social-btn"><svg viewBox="0 0 448 512" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+        </div>
       </div>
       <div>
         <div class="footer-col-t">Services</div>
