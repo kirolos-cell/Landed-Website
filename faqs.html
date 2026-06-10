@@ -121,6 +121,25 @@
   .hamburger.open span:nth-child(2){ opacity: 0; }
   .hamburger.open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
 
+  /* ===== STICKY MOBILE CALL / CTA BAR ===== */
+  .mobile-cta-bar { display: none; }
+  @media (max-width: 760px) {
+    .mobile-cta-bar {
+      display: grid; grid-template-columns: 1fr 1.45fr; gap: 10px;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 120;
+      padding: 10px 14px; padding-bottom: calc(10px + env(safe-area-inset-bottom));
+      background: rgba(8,15,24,0.97); border-top: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 -6px 24px rgba(0,0,0,0.3);
+    }
+    .mcta { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 10px; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.3px; text-decoration: none; line-height: 1; }
+    .mcta-call { background: rgba(255,255,255,0.08); color: #fff; border: 1.5px solid rgba(255,255,255,0.3); }
+    .mcta-primary { background: var(--taupe); color: #fff; }
+    body { padding-bottom: 74px; }
+    /* Hide the bar when the menu is open or a form field is focused */
+    body:has(.nav-links.open) .mobile-cta-bar,
+    body:has(input:focus, textarea:focus, select:focus) .mobile-cta-bar { display: none; }
+  }
+
   /* ===== HERO ===== */
   #hero { position: relative; min-height: 85vh; display: flex; align-items: center; overflow: hidden; padding-top: 150px; padding-bottom: 90px; }
   .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 1; animation: heroZoom 16s ease-out forwards; }
@@ -724,7 +743,7 @@
 </section>
 
 <!-- CTA -->
-<section class="section" style="background:var(--navy); padding:80px 0;">
+<section id="enquire" class="section" style="background:var(--navy); padding:80px 0;">
   <div class="wrap" style="max-width:560px;">
     <div style="text-align:center; margin-bottom:30px;">
       <h2 class="sec-title" style="color:#fff; margin-bottom:18px;">Still have a question?</h2>
@@ -897,5 +916,11 @@
   }
   document.querySelectorAll('form[action*="formspree.io"]').forEach(wireForm);
 </script>
+<!-- STICKY MOBILE CTA BAR -->
+<div class="mobile-cta-bar">
+  <a href="tel:0403385125" class="mcta mcta-call"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>Call</a>
+  <a href="#enquire" class="mcta mcta-primary">Free Assessment</a>
+</div>
+
 </body>
 </html>
