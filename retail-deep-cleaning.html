@@ -714,8 +714,77 @@
   </div>
 </section>
 
+<!-- FREQUENCY PROGRAMME -->
+<section id="programme" class="section" style="background:var(--light-bg); border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="steps-head reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">Your Programme</span></span>
+      <h2 class="sec-title">Set a schedule<br>that suits your site</h2>
+      <p class="sec-lead">Deep cleans work best on a rhythm. We set a frequency around your foot traffic, floor size and fit-out, then keep to it so the place never falls behind.</p>
+    </div>
+    <div class="freq-grid">
+      <div class="freq-card reveal">
+        <span class="freq-name">Fortnightly</span>
+        <div class="freq-line"></div>
+        <p>High-traffic stores, gyms, food-adjacent tenancies and large floorplates where build-up happens fast and presentation cannot slip.</p>
+      </div>
+      <div class="freq-card reveal rd1">
+        <span class="freq-tag">Most common</span>
+        <span class="freq-name">Monthly</span>
+        <div class="freq-line"></div>
+        <p>The right balance for most clothing and general retail, showrooms and offices. Steady foot traffic, a full reset every month, no surprises.</p>
+      </div>
+      <div class="freq-card reveal rd2">
+        <span class="freq-name">Quarterly</span>
+        <div class="freq-line"></div>
+        <p>Smaller boutiques, jewellery, clinics and low-footfall showrooms that need a periodic deep reset rather than constant attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="enquire" class="section" style="background:var(--navy); padding:80px 0;">
+  <div class="wrap" style="max-width:560px;">
+    <div style="text-align:center; margin-bottom:30px;">
+      <h2 class="sec-title" style="color:#fff; margin-bottom:18px;">Book a free walkthrough</h2>
+      <p style="color:rgba(255,255,255,0.6); font-weight:300; max-width:520px; margin:0 auto; font-size:17px;">Tell us about your site and we will put together a deep clean programme that fits it. Free walkthrough and quote, no obligation.</p>
+    </div>
+    <div class="hero-form-card">
+      <form action="https://formspree.io/f/xgoqddbl" method="POST">
+        <input type="hidden" name="_subject" value="New website lead: Retail Deep Cleaning enquiry">
+        <input type="hidden" name="source" value="Retail Deep Cleaning page form">
+        <h2>Speak to our team</h2>
+        <p class="hfc-sub">A local Melbourne building manager will call you back &mdash; usually the same day. Free and no obligation.</p>
+        <div class="fg"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required></div>
+        <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="Best contact number" required></div>
+        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+        <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us about your building or enquiry..." required></textarea></div>
+        <button type="submit" class="btn-submit"><span>Request my callback &rarr;</span></button>
+        <p class="hfc-note">Prefer to talk now? <a href="tel:0403385125">Call 0403 385 125</a></p>
+      </form>
+      <div class="form-success">
+        <div class="fs-check"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>Thanks &mdash; we've got it.</h3>
+        <p>A member of our Melbourne team will be in touch shortly. Need us sooner? Call <a href="tel:0403385125" style="color:var(--navy);font-weight:600;">0403 385 125</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var ans = item.querySelector('.faq-a');
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      ans.style.maxHeight = isOpen ? (ans.scrollHeight + 'px') : null;
+    });
+  });
+</script>
 <!-- WHAT IS INCLUDED -->
-<section id="included" class="section" style="background:var(--light-bg); border-top:1px solid var(--border);">
+<section id="included" class="section">
   <div class="wrap">
     <div class="steps-head reveal">
       <span class="eyebrow"><span class="eyebrow-txt">What Is Included</span></span>
@@ -801,35 +870,6 @@
   </div>
 </section>
 
-<!-- FREQUENCY PROGRAMME -->
-<section id="programme" class="section">
-  <div class="wrap">
-    <div class="steps-head reveal">
-      <span class="eyebrow"><span class="eyebrow-txt">Your Programme</span></span>
-      <h2 class="sec-title">Set a schedule<br>that suits your site</h2>
-      <p class="sec-lead">Deep cleans work best on a rhythm. We set a frequency around your foot traffic, floor size and fit-out, then keep to it so the place never falls behind.</p>
-    </div>
-    <div class="freq-grid">
-      <div class="freq-card reveal">
-        <span class="freq-name">Fortnightly</span>
-        <div class="freq-line"></div>
-        <p>High-traffic stores, gyms, food-adjacent tenancies and large floorplates where build-up happens fast and presentation cannot slip.</p>
-      </div>
-      <div class="freq-card reveal rd1">
-        <span class="freq-tag">Most common</span>
-        <span class="freq-name">Monthly</span>
-        <div class="freq-line"></div>
-        <p>The right balance for most clothing and general retail, showrooms and offices. Steady foot traffic, a full reset every month, no surprises.</p>
-      </div>
-      <div class="freq-card reveal rd2">
-        <span class="freq-name">Quarterly</span>
-        <div class="freq-line"></div>
-        <p>Smaller boutiques, jewellery, clinics and low-footfall showrooms that need a periodic deep reset rather than constant attention.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- HOW WE WORK -->
 <section id="howwework" class="section" style="background:var(--light-bg); border-top:1px solid var(--border);">
   <div class="wrap">
@@ -853,46 +893,17 @@
     </div>
   </div>
 </section>
-<!-- CTA -->
-<section id="enquire" class="section" style="background:var(--navy); padding:80px 0;">
-  <div class="wrap" style="max-width:560px;">
-    <div style="text-align:center; margin-bottom:30px;">
-      <h2 class="sec-title" style="color:#fff; margin-bottom:18px;">Book a free walkthrough</h2>
-      <p style="color:rgba(255,255,255,0.6); font-weight:300; max-width:520px; margin:0 auto; font-size:17px;">Tell us about your site and we will put together a deep clean programme that fits it. Free walkthrough and quote, no obligation.</p>
-    </div>
-    <div class="hero-form-card">
-      <form action="https://formspree.io/f/xgoqddbl" method="POST">
-        <input type="hidden" name="_subject" value="New website lead: Retail Deep Cleaning enquiry">
-        <input type="hidden" name="source" value="Retail Deep Cleaning page form">
-        <h2>Speak to our team</h2>
-        <p class="hfc-sub">A local Melbourne building manager will call you back &mdash; usually the same day. Free and no obligation.</p>
-        <div class="fg"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required></div>
-        <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="Best contact number" required></div>
-        <div class="fg"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
-        <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell us about your building or enquiry..." required></textarea></div>
-        <button type="submit" class="btn-submit"><span>Request my callback &rarr;</span></button>
-        <p class="hfc-note">Prefer to talk now? <a href="tel:0403385125">Call 0403 385 125</a></p>
-      </form>
-      <div class="form-success">
-        <div class="fs-check"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <h3>Thanks &mdash; we've got it.</h3>
-        <p>A member of our Melbourne team will be in touch shortly. Need us sooner? Call <a href="tel:0403385125" style="color:var(--navy);font-weight:600;">0403 385 125</a>.</p>
-      </div>
+<!-- BOTTOM CTA -->
+<section class="section" style="background:var(--navy); padding:64px 0;">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="sec-title" style="color:#fff; margin-bottom:16px; font-size:clamp(28px,3.4vw,42px);">Ready for a proper clean?</h2>
+    <p style="color:rgba(255,255,255,0.6); font-weight:300; max-width:520px; margin:0 auto 28px; font-size:16px;">Free walkthrough and quote, no obligation.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="#enquire" class="btn-primary">Book a walkthrough <span>&rarr;</span></a>
+      <a href="tel:0403385125" class="btn-ghost">Call 0403 385 125</a>
     </div>
   </div>
 </section>
-
-<script>
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var item = btn.closest('.faq-item');
-      var ans = item.querySelector('.faq-a');
-      var isOpen = item.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      ans.style.maxHeight = isOpen ? (ans.scrollHeight + 'px') : null;
-    });
-  });
-</script>
 <footer>
   <div class="wrap">
     <div class="footer-top">
