@@ -642,7 +642,7 @@
       </div>
       <div class="hero-form-card">
         <form action="https://formspree.io/f/xgoqddbl" method="POST">
-          <input type="hidden" name="_subject" value="New website lead ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Hero callback request">
+          <input type="hidden" name="_subject" value="New website lead: Hero callback request">
           <input type="hidden" name="source" value="Homepage hero form">
           <h2>Speak to our team</h2>
           <p class="hfc-sub">Leave your details and a local Melbourne building manager will call you back &mdash; usually the same day. Free and no obligation.</p>
@@ -833,7 +833,7 @@
         <div class="form-title">Make an Enquiry</div>
         <div class="form-sub">We respond to all enquiries within 1 business day.</div>
         <form action="https://formspree.io/f/xgoqddbl" method="POST">
-          <input type="hidden" name="_subject" value="New website enquiry ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Contact form">
+          <input type="hidden" name="_subject" value="New website enquiry: Contact form">
           <input type="hidden" name="source" value="Homepage contact form">
           <div class="form-row">
             <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
@@ -981,7 +981,7 @@
       var label = btn ? btn.querySelector('span') : null;
       var originalText = label ? label.textContent : '';
       if (btn) { btn.disabled = true; }
-      if (label) { label.textContent = 'SendingÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦'; }
+      if (label) { label.textContent = 'Sending...'; }
       function reset() { if (btn) { btn.disabled = false; } if (label) { label.textContent = originalText; } }
 
       fetch(form.action, {
@@ -1006,7 +1006,7 @@
           reset();
         }
       }).catch(function () {
-        alert('Network error ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â please call us on 0403 385 125.');
+        alert('Network error, please call us on 0403 385 125.');
         reset();
       });
     });

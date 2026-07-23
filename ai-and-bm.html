@@ -653,7 +653,7 @@
     </div>
     <div class="hero-form-card">
       <form action="https://formspree.io/f/xgoqddbl" method="POST">
-        <input type="hidden" name="_subject" value="New website lead ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â AI page callback request">
+        <input type="hidden" name="_subject" value="New website lead: AI page callback request">
         <input type="hidden" name="source" value="AI & Building Management page form">
         <h2>Speak to our team</h2>
         <p class="hfc-sub">A local Melbourne building manager will call you back &mdash; usually the same day. Free and no obligation.</p>
@@ -781,7 +781,7 @@
       var label = btn ? btn.querySelector('span') : null;
       var originalText = label ? label.textContent : '';
       if (btn) { btn.disabled = true; }
-      if (label) { label.textContent = 'SendingÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦'; }
+      if (label) { label.textContent = 'Sending...'; }
       function reset() { if (btn) { btn.disabled = false; } if (label) { label.textContent = originalText; } }
 
       fetch(form.action, {
@@ -805,7 +805,7 @@
           reset();
         }
       }).catch(function () {
-        alert('Network error ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â please call us on 0403 385 125.');
+        alert('Network error, please call us on 0403 385 125.');
         reset();
       });
     });
