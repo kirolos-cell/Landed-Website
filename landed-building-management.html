@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -102,6 +102,7 @@
   .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; }
   .nav-links a { text-decoration: none; color: rgba(255,255,255,0.82); font-size: 15px; font-weight: 600; letter-spacing: 0.5px; transition: color 0.3s; position: relative; }
   .nav-links a:not(.nav-cta) { font-family: 'Outfit', sans-serif; color: #fff; font-weight: 700; font-size: 16px; letter-spacing: 0.2px; }
+  .nav-links a.nav-featured { color: var(--gold); }
   .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-5px; left:0; right:0; height:1.5px; background: var(--taupe-light); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
   .nav-links a:not(.nav-cta):hover { color: #fff; }
   .nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
@@ -568,7 +569,7 @@
   "makesOffer": [
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Building Management" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concierge Services" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cleaning Services" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Deep Cleaning" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free Site Assessment" } }
   ]
 }
@@ -609,7 +610,8 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="ai-and-bm.html">AI &amp; Building Management</a></li>
+      <li><a href="retail-deep-cleaning.html" class="nav-featured">Retail Cleaning</a></li>
+      <li><a href="ai-and-bm.html">AI &amp; Buildings</a></li>
       <li><a href="faqs.html">FAQs</a></li>
       <li><a href="#contact" class="nav-cta">Request a Proposal<small>Enquire Now</small></a></li>
     </ul>
@@ -640,7 +642,7 @@
       </div>
       <div class="hero-form-card">
         <form action="https://formspree.io/f/xgoqddbl" method="POST">
-          <input type="hidden" name="_subject" value="New website lead — Hero callback request">
+          <input type="hidden" name="_subject" value="New website lead ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Hero callback request">
           <input type="hidden" name="source" value="Building Management page hero form">
           <h2>Speak to our team</h2>
           <p class="hfc-sub">Leave your details and a local Melbourne building manager will call you back &mdash; usually the same day. Free and no obligation.</p>
@@ -712,21 +714,20 @@
         <a href="#contact" class="svc-link">Enquire about Concierge Services &rarr;</a>
       </div>
       <div class="svc-card reveal rd2" data-index="03">
-        <span class="svc-num">03 / Cleaning Services</span>
+        <span class="svc-num">03 / Retail Deep Cleaning</span>
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M19 21V8l-7-5-7 5v13M9 21v-6h6v6"/><path d="M12 3v3"/></svg></div>
-        <h3 class="svc-name">Cleaning Services</h3>
-        <div class="svc-incentive">We generally beat your current verified cleaning contract by 10% &mdash; enquire for a free comparison.</div>
-        <p class="svc-desc">Reliable, presentation-grade cleaning that keeps every common area and apartment looking its best.</p>
+        <h3 class="svc-name">Retail Deep Cleaning</h3>
+        <p class="svc-desc">Shops, showrooms, gyms, clinics and offices. Your team keeps it tidy, we clean what they cannot reach.</p>
         <ul class="svc-list">
-          <li>Apartment cleaning</li>
-          <li>Floor sweeping &amp; mopping</li>
-          <li>Window cleaning</li>
-          <li>Common area cleaning</li>
-          <li>Carpark &amp; lobby upkeep</li>
-          <li>Rubbish chute maintenance</li>
-          <li>Waste &amp; bin management</li>
+          <li>High-level cleaning: above lights, vents and ceilings</li>
+          <li>Behind and underneath shelving, racks and displays</li>
+          <li>Glass, mirrors, fitting rooms and display cabinets</li>
+          <li>Floor scrubbing and carpet extraction</li>
+          <li>Fixtures, counters, chrome and fit-out detail</li>
+          <li>Back of house: stockrooms, staff areas and amenities</li>
+          <li>After-hours and shopping centre compliant</li>
         </ul>
-        <a href="#contact" class="svc-link">Enquire about Cleaning Services &rarr;</a>
+        <a href="retail-deep-cleaning.html" class="svc-link">See what's included &rarr;</a>
       </div>
     </div>
   </div>
@@ -832,7 +833,7 @@
         <div class="form-title">Make an Enquiry</div>
         <div class="form-sub">We respond to all enquiries within 1 business day.</div>
         <form action="https://formspree.io/f/xgoqddbl" method="POST">
-          <input type="hidden" name="_subject" value="New website enquiry — Contact form">
+          <input type="hidden" name="_subject" value="New website enquiry ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â Contact form">
           <input type="hidden" name="source" value="Building Management page contact form">
           <div class="form-row">
             <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
@@ -845,7 +846,7 @@
                 <option value="" disabled selected>Select a service</option>
                 <option>Building Management</option>
                 <option>Concierge Services</option>
-                <option>Cleaning Services</option>
+                <option>Retail Deep Cleaning</option>
                 <option>Free Site Assessment</option>
                 <option>General Enquiry</option>
               </select>
@@ -888,7 +889,7 @@
         <ul class="footer-links">
           <li><a href="#services">Building Management</a></li>
           <li><a href="#services">Concierge Services</a></li>
-          <li><a href="#services">Cleaning Services</a></li>
+          <li><a href="retail-deep-cleaning.html">Retail Deep Cleaning</a></li>
           <li><a href="#assess">Free Site Assessment</a></li>
         </ul>
       </div>
@@ -897,7 +898,8 @@
         <ul class="footer-links">
           <li><a href="#why">Why Us</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="ai-and-bm.html">AI &amp; Building Management</a></li>
+          <li><a href="retail-deep-cleaning.html" class="nav-featured">Retail Cleaning</a></li>
+      <li><a href="ai-and-bm.html">AI &amp; Buildings</a></li>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -982,7 +984,7 @@
       var label = btn ? btn.querySelector('span') : null;
       var originalText = label ? label.textContent : '';
       if (btn) { btn.disabled = true; }
-      if (label) { label.textContent = 'Sending…'; }
+      if (label) { label.textContent = 'SendingÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦'; }
       function reset() { if (btn) { btn.disabled = false; } if (label) { label.textContent = originalText; } }
 
       fetch(form.action, {
@@ -1006,7 +1008,7 @@
           reset();
         }
       }).catch(function () {
-        alert('Network error — please call us on 0403 385 125.');
+        alert('Network error ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â please call us on 0403 385 125.');
         reset();
       });
     });

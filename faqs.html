@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -102,6 +102,7 @@
   .nav-links { display: flex; align-items: center; gap: 20px; list-style: none; }
   .nav-links a { text-decoration: none; color: rgba(255,255,255,0.82); font-size: 14px; font-weight: 600; letter-spacing: 0.5px; transition: color 0.3s; position: relative; }
   .nav-links a:not(.nav-cta) { font-family: 'Outfit', sans-serif; color: #fff; font-weight: 700; font-size: 16px; letter-spacing: 0.2px; }
+  .nav-links a.nav-featured { color: var(--gold); }
   .nav-links a:not(.nav-cta)::after { content:''; position:absolute; bottom:-5px; left:0; right:0; height:1.5px; background: var(--taupe-light); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
   .nav-links a:not(.nav-cta):hover { color: #fff; }
   .nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
@@ -586,7 +587,9 @@
     { "@type": "Question", "name": "Do you offer after-hours and emergency support?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Building issues rarely keep to business hours, so we provide after-hours response so your building is never left without support when something urgent comes up." } },
     { "@type": "Question", "name": "How much does building management cost?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on the size of your building and the services you need, which is why we start with a free, no-obligation proposal. After a conversation and a site assessment we provide a clear, tailored quote." } },
     { "@type": "Question", "name": "Is the site assessment really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the site assessment is genuinely free and with no obligation. We come to your building, review it in person, and show you exactly what we would do before you commit to anything." } },
-    { "@type": "Question", "name": "What cleaning services do you provide?", "acceptedAnswer": { "@type": "Answer", "text": "Presentation-grade cleaning for every part of a building: common areas, lobbies and carparks, floor sweeping and mopping, window cleaning, rubbish chute maintenance, waste and bin management, and apartment cleaning." } },
+    { "@type": "Question", "name": "What building cleaning do you provide?", "acceptedAnswer": { "@type": "Answer", "text": "Presentation-grade cleaning for every part of a building: common areas, lobbies and carparks, floor sweeping and mopping, window cleaning, rubbish chute maintenance, waste and bin management, and apartment cleaning." } },
+    { "@type": "Question", "name": "What is a retail deep clean?", "acceptedAnswer": { "@type": "Answer", "text": "It is the periodic heavy clean that day to day tidying cannot cover. Landed works above light fittings, behind and under shelving and displays, across glass and mirrors, floors, fixtures and back of house for Melbourne shops, showrooms, gyms, clinics and offices." } },
+    { "@type": "Question", "name": "How often should we book a retail deep clean?", "acceptedAnswer": { "@type": "Answer", "text": "Most sites land on monthly. Fortnightly suits high traffic stores, gyms and large floorplates where build-up is fast. Quarterly suits smaller boutiques, jewellery and low footfall showrooms. Landed sets the frequency after seeing the space." } },
     { "@type": "Question", "name": "How do I get started with Landed?", "acceptedAnswer": { "@type": "Answer", "text": "Three steps: speak with our team about the services you need and receive a free, no-obligation proposal; we carry out a site assessment and onsite review; then we set up a go-live and transition plan so launch is seamless and daily operations run smoothly." } }
   ]
 }
@@ -623,7 +626,8 @@
       <li><a href="index.html#services">Services</a></li>
       <li><a href="index.html#why">Why Us</a></li>
       <li><a href="index.html#about">About</a></li>
-      <li><a href="ai-and-bm.html">AI &amp; Building Management</a></li>
+      <li><a href="retail-deep-cleaning.html" class="nav-featured">Retail Cleaning</a></li>
+      <li><a href="ai-and-bm.html">AI &amp; Buildings</a></li>
       <li><a href="faqs.html" style="color:var(--gold)">FAQs</a></li>
       <li><a href="index.html#contact" class="nav-cta">Request a Proposal<small>Enquire Now</small></a></li>
     </ul>
@@ -678,7 +682,7 @@
     </div>
 
     <div class="faq-group reveal">
-      <h3 class="faq-group-title">Building Management &amp; General</h3>
+      <h3 class="faq-group-title">Building Management &amp; Strata Cleaning</h3>
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">What does a building manager actually do?<span class="faq-icon"></span></button>
@@ -716,14 +720,8 @@
           <button class="faq-q" aria-expanded="false">Is the site assessment really free?<span class="faq-icon"></span></button>
           <div class="faq-a"><div class="faq-a-inner">Yes, genuinely free and with no obligation. We come to your building, review it in person, and show you exactly what we would do before you commit to anything.</div></div>
         </div>
-      </div>
-    </div>
-
-    <div class="faq-group reveal">
-      <h3 class="faq-group-title">Cleaning Services</h3>
-      <div class="faq-list">
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What cleaning services do you provide?<span class="faq-icon"></span></button>
+          <button class="faq-q" aria-expanded="false">What building cleaning do you provide?<span class="faq-icon"></span></button>
           <div class="faq-a"><div class="faq-a-inner">Presentation-grade cleaning for every part of a building: common areas, lobbies and carparks, floor sweeping and mopping, window cleaning, rubbish chute maintenance, waste and bin management, and apartment cleaning. The goal is a building that consistently looks and feels well cared-for.</div></div>
         </div>
         <div class="faq-item">
@@ -735,16 +733,45 @@
           <div class="faq-a"><div class="faq-a-inner">Yes. Waste and bin management and rubbish chute maintenance are part of what we do, keeping waste areas clean, orderly and hygienic, which is one of the most common pain points in residential buildings.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Can cleaning be combined with building management?<span class="faq-icon"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">It can, and many clients prefer it that way. Having cleaning and building management under one local team means better coordination, a single point of contact, and a consistent standard across the whole building.</div></div>
-        </div>
-        <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Do you clean individual apartments?<span class="faq-icon"></span></button>
           <div class="faq-a"><div class="faq-a-inner">Yes. Alongside common-area cleaning we also offer apartment cleaning, which is useful for turnovers, move-ins, and owners who want their unit kept to the same standard as the rest of the building.</div></div>
         </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can cleaning be combined with building management?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">It can, and many clients prefer it that way. Having cleaning and building management under one local team means better coordination, a single point of contact, and a consistent standard across the whole building.</div></div>
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="faq-group reveal">
+      <h3 class="faq-group-title">Retail Deep Cleaning</h3>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What is a retail deep clean?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">It is the periodic heavy clean that day to day tidying cannot cover. We work above the light fittings, behind and under shelving and displays, across glass and mirrors, floors, fixtures and back of house, so the parts of your space that quietly build up grime get properly reset.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How is this different from our regular cleaner?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Your team or your daily cleaner keeps the floor presentable between customers. A deep clean is the scheduled reset on top of that: high level work, machine scrubbing, and the spots that need equipment, time and access outside trading hours. We are not replacing your day to day cleaning, we are doing the part it cannot reach.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How often should we book one?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Most sites land on monthly. Fortnightly suits high traffic stores, gyms and large floorplates where build-up is fast. Quarterly suits smaller boutiques, jewellery and low footfall showrooms. We set the frequency after seeing the space.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you work outside trading hours?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Always. We clean early mornings, late nights or overnight so a deep clean never costs you a sale or gets in a customer's way.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can you work inside a shopping centre?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. We are inducted and insured, and we work to centre requirements for access, timing and paperwork so you are not chasing approvals on our behalf.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What types of businesses do you clean?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Shops and shopping centre tenancies, standalone shopfronts, showrooms, gyms, clinics and offices. If it is a commercial space that needs more than a daily wipe-down, it suits a deep clean programme.</div></div>
+        </div>
+      </div>
+    </div>  </div>
 </section>
 
 <!-- CTA -->
@@ -756,7 +783,7 @@
     </div>
     <div class="hero-form-card">
       <form action="https://formspree.io/f/xgoqddbl" method="POST">
-        <input type="hidden" name="_subject" value="New website lead — FAQ page callback request">
+        <input type="hidden" name="_subject" value="New website lead ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â FAQ page callback request">
         <input type="hidden" name="source" value="FAQ page form">
         <h2>Speak to our team</h2>
         <p class="hfc-sub">A local Melbourne building manager will call you back &mdash; usually the same day. Free and no obligation.</p>
@@ -809,7 +836,7 @@
         <ul class="footer-links">
           <li><a href="index.html#services">Building Management</a></li>
           <li><a href="index.html#services">Concierge Services</a></li>
-          <li><a href="index.html#services">Cleaning Services</a></li>
+          <li><a href="retail-deep-cleaning.html">Retail Deep Cleaning</a></li>
           <li><a href="index.html#assess">Free Site Assessment</a></li>
         </ul>
       </div>
@@ -818,7 +845,8 @@
         <ul class="footer-links">
           <li><a href="index.html#why">Why Us</a></li>
           <li><a href="index.html#about">About</a></li>
-          <li><a href="ai-and-bm.html">AI &amp; Building Management</a></li>
+          <li><a href="retail-deep-cleaning.html" class="nav-featured">Retail Cleaning</a></li>
+      <li><a href="ai-and-bm.html">AI &amp; Buildings</a></li>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -894,7 +922,7 @@
       var label = btn ? btn.querySelector('span') : null;
       var originalText = label ? label.textContent : '';
       if (btn) { btn.disabled = true; }
-      if (label) { label.textContent = 'Sending…'; }
+      if (label) { label.textContent = 'SendingÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦'; }
       function reset() { if (btn) { btn.disabled = false; } if (label) { label.textContent = originalText; } }
 
       fetch(form.action, {
@@ -918,7 +946,7 @@
           reset();
         }
       }).catch(function () {
-        alert('Network error — please call us on 0403 385 125.');
+        alert('Network error ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â please call us on 0403 385 125.');
         reset();
       });
     });

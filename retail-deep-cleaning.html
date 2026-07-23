@@ -5,20 +5,20 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI &amp; Building Management in Australia | Landed Group</title>
-<meta name="description" content="How AI will assist Australian building managers: optimising daily duties, faster response, predictive maintenance, energy and cost savings. A Landed Group feature.">
+<title>Retail Deep Cleaning Melbourne | Shops, Gyms &amp; Offices | Landed Group</title>
+<meta name="description" content="Deep cleaning for Melbourne shops, shopping centre tenancies, showrooms, gyms, clinics and offices. We clean what your staff cannot reach: above lights, behind shelving, floors and back of house. Fortnightly, monthly or quarterly programmes.">
 <meta name="keywords" content="building management Melbourne, building management services, owners corporation building management, support for strata managers Melbourne, concierge services Melbourne, building cleaning Melbourne">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Landed Group">
-<link rel="canonical" href="https://landedgroupau.com/">
+<link rel="canonical" href="https://landedgroupau.com/retail-deep-cleaning.html">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Building Management Melbourne | Landed Group">
+<meta property="og:title" content="FAQs | Building Management &amp; Cleaning Melbourne | Landed Group">
 <meta property="og:description" content="Melbourne building management, concierge and cleaning for owners corporations, strata managers and property portfolios. Local team, after-hours support, free site assessments.">
-<meta property="og:url" content="https://landedgroupau.com/">
+<meta property="og:url" content="https://landedgroupau.com/faqs.html">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Building Management Melbourne | Landed Group">
+<meta name="twitter:title" content="FAQs | Building Management &amp; Cleaning Melbourne | Landed Group">
 <meta name="twitter:description" content="Melbourne building management, concierge and cleaning for owners corporations, strata managers and property portfolios.">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18202148938"></script>
@@ -531,37 +531,115 @@
     .article-head { padding-left: 22px; }
   }
 
+
+  /* ===== FAQ PAGE ===== */
+  .faq-hero { background: var(--navy); position: relative; overflow: hidden; padding: 185px 0 95px; }
+  .faq-hero::before { content:''; position:absolute; top:-120px; right:-80px; width:420px; height:420px; border-radius:50%; background: radial-gradient(circle, rgba(148,138,129,0.14) 0%, transparent 70%); }
+  .faq-hero .wrap { position: relative; z-index: 2; }
+  .faq-hero .eyebrow-txt { color: var(--taupe-light); }
+  .faq-hero h1 { font-family:'Outfit',sans-serif; font-size: clamp(38px,5.4vw,62px); font-weight:700; color:#fff; letter-spacing:-1.5px; line-height:1.04; margin-top:6px; }
+  .faq-hero p { font-size:18px; font-weight:300; color:rgba(255,255,255,0.66); line-height:1.7; margin-top:22px; max-width:600px; }
+
+  #getstarted { background: var(--white); }
+  .steps-head { max-width:680px; margin-bottom:60px; position:relative; padding-left:30px; }
+  .steps-head::before { content:''; position:absolute; left:0; top:6px; bottom:18px; width:4px; background: linear-gradient(to bottom,var(--gold),transparent); border-radius:4px; }
+  .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .step-card { background:var(--off-white); border:1px solid var(--border); border-radius:4px; padding:44px 36px; position:relative; transition:all .4s ease; display:flex; flex-direction:column; }
+  .step-card:hover { background:#fff; transform:translateY(-6px); box-shadow:0 24px 56px rgba(16,28,42,0.1); border-color:transparent; }
+  .step-num { font-family:'Outfit',sans-serif; font-weight:800; font-size:56px; line-height:1; color:var(--navy); opacity:0.1; margin-bottom:16px; }
+  .step-title { font-size:22px; font-weight:600; color:var(--navy); margin-bottom:12px; line-height:1.2; }
+  .step-text { font-size:15px; font-weight:300; color:var(--text-body); line-height:1.75; }
+
+  #faqs { background: var(--light-bg); border-top:1px solid var(--border); }
+  .faq-group { margin-bottom:46px; }
+  .faq-group:last-child { margin-bottom:0; }
+  .faq-group-title { font-family:'Outfit',sans-serif; font-size:23px; font-weight:700; color:var(--navy); letter-spacing:-0.5px; margin:0 0 18px; padding-left:14px; border-left:4px solid var(--gold); }
+  .faq-list { display:flex; flex-direction:column; gap:14px; max-width:900px; }
+  .faq-item { background:#fff; border:1px solid var(--border); border-radius:4px; overflow:hidden; transition:box-shadow .3s, border-color .3s; }
+  .faq-item.open { box-shadow:0 14px 40px rgba(16,28,42,0.08); border-color:transparent; }
+  .faq-q { width:100%; background:none; border:none; cursor:pointer; text-align:left; padding:22px 26px; display:flex; align-items:center; justify-content:space-between; gap:20px; font-family:'Outfit',sans-serif; font-size:17px; font-weight:600; color:var(--navy); letter-spacing:-0.2px; line-height:1.35; transition:color .3s; }
+  .faq-q:hover { color:var(--taupe); }
+  .faq-icon { flex-shrink:0; width:22px; height:22px; position:relative; }
+  .faq-icon::before, .faq-icon::after { content:''; position:absolute; background:var(--taupe); border-radius:2px; transition:transform .3s ease, opacity .3s ease; }
+  .faq-icon::before { top:10px; left:0; width:22px; height:2px; }
+  .faq-icon::after { left:10px; top:0; width:2px; height:22px; }
+  .faq-item.open .faq-icon::after { transform:rotate(90deg); opacity:0; }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height .4s ease; }
+  .faq-a-inner { padding:0 26px 24px; font-size:15px; font-weight:300; color:var(--text-body); line-height:1.8; }
+  .faq-a-inner strong { font-weight:600; color:var(--navy); }
+
+  /* ===== DEEP CLEANING PAGE ===== */
+  .faq-hero { background: linear-gradient(100deg, rgba(8,15,24,0.95) 0%, rgba(10,18,32,0.88) 42%, rgba(12,22,38,0.66) 100%), url('images/retail-hero.jpg') center/cover no-repeat; }
+  .split-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  .split-grid .steps-head { margin-bottom:0; }
+  .split-img img { width:100%; height:420px; object-fit:cover; border-radius:4px; display:block; box-shadow:0 24px 56px rgba(16,28,42,0.16); }
+  .img-band { width:100%; height:340px; overflow:hidden; }
+  .img-band img { width:100%; height:100%; object-fit:cover; display:block; }
+  @media (max-width:900px){
+    .split-grid { grid-template-columns:1fr; gap:34px; }
+    .split-img img { height:300px; }
+    .img-band { height:220px; }
+  }
+  .incl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+  .incl-card { background:#fff; border:1px solid var(--border); border-radius:4px; padding:32px 28px; transition:all .4s ease; }
+  .incl-card:hover { transform:translateY(-5px); box-shadow:0 22px 50px rgba(16,28,42,0.09); border-color:transparent; }
+  .incl-card h3 { font-family:'Outfit',sans-serif; font-size:19px; font-weight:700; color:var(--navy); letter-spacing:-0.3px; margin-bottom:16px; padding-left:13px; border-left:3px solid var(--gold); line-height:1.25; }
+  .incl-card ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .incl-card li { font-size:14.5px; font-weight:300; color:var(--text-body); line-height:1.55; padding-left:20px; position:relative; }
+  .incl-card li::before { content:''; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--taupe); }
+
+  .freq-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .freq-card { background:var(--off-white); border:1px solid var(--border); border-radius:4px; padding:38px 32px; text-align:center; transition:all .4s ease; }
+  .freq-card:hover { background:#fff; transform:translateY(-6px); box-shadow:0 24px 56px rgba(16,28,42,0.1); border-color:transparent; }
+  .freq-name { font-family:'Outfit',sans-serif; font-size:26px; font-weight:700; color:var(--navy); letter-spacing:-0.5px; display:block; }
+  .freq-line { width:40px; height:2px; background:var(--gold); margin:14px auto 16px; }
+  .freq-card p { font-size:14.5px; font-weight:300; color:var(--text-body); line-height:1.7; }
+  .freq-tag { display:inline-block; background:rgba(196,163,90,0.14); border:1px solid rgba(196,163,90,0.45); color:var(--navy); font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:5px 11px; border-radius:3px; margin-bottom:14px; }
+
+  .work-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .work-card { background:#fff; border:1px solid var(--border); border-radius:4px; padding:34px 30px; }
+  .work-card h3 { font-family:'Outfit',sans-serif; font-size:19px; font-weight:700; color:var(--navy); margin-bottom:12px; letter-spacing:-0.3px; }
+  .work-card p { font-size:14.5px; font-weight:300; color:var(--text-body); line-height:1.75; }
+
+  @media (max-width:900px){ .freq-grid, .work-grid { grid-template-columns:1fr; } }
+
+  @media (max-width:760px){
+    .faq-hero { padding:140px 0 60px; }
+    .steps-grid { grid-template-columns:1fr; }
+    .steps-head { padding-left:22px; }
+    .faq-q { font-size:15.5px; padding:18px 20px; }
+    .faq-a-inner { padding:0 20px 20px; }
+  }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Landed Group",
-  "image": "https://landedgroupau.com/",
-  "url": "https://landedgroupau.com/",
-  "telephone": "+61403385125",
-  "email": "contact@landedgroupau.com",
-  "priceRange": "$$",
-  "description": "Melbourne building management, concierge and cleaning services for owners corporations, strata managers and property portfolios.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Melbourne",
-    "addressRegion": "VIC",
-    "addressCountry": "AU"
+  "@type": "Service",
+  "serviceType": "Retail Deep Cleaning",
+  "name": "Retail Deep Cleaning for Retail and Shopfronts",
+  "description": "Scheduled retail deep cleaning for Melbourne retail stores, shopfronts and shopping centre tenancies. Covers high-level cleaning above lights and vents, behind and under shelving and displays, glass and mirrors, floor scrubbing and carpet extraction, fixtures and back of house. Available on a fortnightly, monthly or quarterly programme, after hours.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Landed Group",
+    "telephone": "+61403385125",
+    "email": "contact@landedgroupau.com",
+    "url": "https://landedgroupau.com/",
+    "areaServed": { "@type": "City", "name": "Melbourne" }
   },
-  "areaServed": [
-    { "@type": "City", "name": "Melbourne" },
-    { "@type": "Place", "name": "Melbourne CBD" },
-    { "@type": "Place", "name": "Greater Melbourne suburbs" }
-  ],
-  "openingHours": "Mo-Su 00:00-24:00",
-  "knowsAbout": ["Building Management", "Owners Corporation Building Management", "Concierge Services", "Building Cleaning", "Property Operations"],
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Building Management" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concierge Services" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retail Deep Cleaning" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free Site Assessment" } }
-  ]
+  "areaServed": { "@type": "City", "name": "Melbourne" },
+  "audience": { "@type": "BusinessAudience", "name": "Retail stores, shopfronts and shopping centre tenancies" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Retail Deep Cleaning inclusions",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "High-level cleaning above lights, vents and ceilings" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cleaning behind and underneath shelving and displays" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Glass, mirrors and display cabinet cleaning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Floor scrubbing and carpet extraction" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fixtures, counters and fit-out detail cleaning" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Back of house, stockroom and amenities cleaning" } }
+    ]
+  }
 }
 </script>
 </head>
@@ -597,64 +675,195 @@
       <li><a href="index.html#why">Why Us</a></li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="retail-deep-cleaning.html" class="nav-featured">Retail Cleaning</a></li>
-      <li><a href="ai-and-bm.html" style="color:var(--gold)">AI &amp; Buildings</a></li>
+      <li><a href="ai-and-bm.html">AI &amp; Buildings</a></li>
       <li><a href="faqs.html">FAQs</a></li>
       <li><a href="index.html#contact" class="nav-cta">Request a Proposal<small>Enquire Now</small></a></li>
     </ul>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
-<!-- INSIGHT / FEATURE ARTICLE -->
-<section id="insight" class="section" style="padding-top:170px;">
+<!-- FAQ HERO -->
+<section class="faq-hero">
   <div class="wrap">
-    <div class="article-head reveal">
-      <span class="eyebrow"><span class="eyebrow-txt">The Future of Building Management</span></span>
-      <h2 class="sec-title">AI &amp; the building<br>manager of tomorrow</h2>
-      <p class="article-meta">Feature &bull; Landed Group Insight &bull; Melbourne, Australia</p>
+    <div class="reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">Retail &amp; Commercial Cleaning</span></span>
+      <h1>Retail deep cleaning<br>for Melbourne</h1>
+      <p>Your team keeps the place tidy day to day. We do the deep clean they cannot: above the lights, behind the shelving, and every spot a daily wipe-down never reaches. For shops, showrooms, gyms, clinics and offices.</p>
     </div>
-
-    <article class="article-body reveal rd1">
-      <p class="article-lead">Australian building management is being quietly reshaped by artificial intelligence. Not the science-fiction version, but practical tools that handle the routine, flag problems early, and free managers to do the work that actually needs a human. Here is how we see it changing the day-to-day across Melbourne and beyond.</p>
-
-      <h3 class="article-h">A market already leaning into technology</h3>
-      <p>The Australian facility management sector is substantial and growing. IBISWorld put the facilities management services market at roughly <strong>$12.0 billion in 2025</strong>, while longer-range forecasts from IMARC Group expect the broader market to more than double, reaching about <strong>USD $1.3 billion in the specialist segment by 2033 at a 7.3% annual growth rate</strong>, with the Internet of Things, AI and building information modelling named as core drivers. The direction of travel is clear: technology is no longer a nice-to-have in Australian buildings, it is becoming the baseline expectation, especially across premium commercial stock in precincts like Melbourne's Docklands and Sydney's Barangaroo.</p>
-
-      <h3 class="article-h">Optimising the day-to-day</h3>
-      <p>The bulk of a building manager's week is routine: logging maintenance requests, chasing contractors, scheduling servicing, and keeping records compliant. These are exactly the tasks AI handles well. Smart building platforms can already triage incoming requests, auto-schedule recurring servicing, and keep digital asset registers current without manual entry. Industry adoption backs this up, with reporting that over <strong>91% of commercial building organisations now use some form of smart building technology</strong>. For a manager, that means less time on administration and more time on the residents, committees and tenants who need genuine attention.</p>
-
-      <h3 class="article-h">Faster help, around the clock</h3>
-      <p>One of the clearest wins is speed of response. AI-assisted systems can acknowledge a fault, dispatch the right contractor, and keep stakeholders updated automatically, at any hour. This matters in Australia, where the workforce is stretched. Jobs and Skills Australia's <strong>2025 Occupation Shortage List found 29% of occupations in national shortage</strong>, with professional and trade roles in construction among the hardest to fill. When you cannot simply hire your way out of demand, tools that compress response times become essential rather than optional. The goal is simple: help that arrives faster, regardless of the time of day.</p>
-
-      <h3 class="article-h">Predicting problems before they happen</h3>
-      <p>This is where AI genuinely changes the game. Traditional maintenance is either reactive (fix it when it breaks) or scheduled (service it on a calendar). Predictive maintenance uses live sensor data and machine learning to spot the early signatures of failure, before a manager would ever notice. Research into Australian commercial buildings found that <strong>predictive maintenance can deliver up to 50% fewer breakdowns</strong>, keeping operations running smoothly. For high-traffic buildings, catching a failing HVAC compressor or a struggling lift motor before it fails avoids both the disruption and the premium cost of an emergency call-out.</p>
-
-      <h3 class="article-h">Real cost and energy savings</h3>
-      <p>The financial case is strongest around energy. According to the Australian Government's energy.gov.au, <strong>HVAC accounts for around 40% of a typical office building's total energy use, and up to 70% of base building energy use</strong>, dominating peak electricity demand. AI-driven controls that tune heating, ventilation and cooling to real occupancy and weather conditions directly attack the building's single largest controllable cost. Better energy performance also lifts a building's NABERS rating, which increasingly influences leasing decisions, particularly as the National Construction Code 2025 pushes Australian buildings toward net-zero pathways. Lower bills, fewer emergency repairs, and a more attractive asset is a combination owners corporations notice.</p>
-
-      <h3 class="article-h">Better general upkeep</h3>
-      <p>Beyond the big-ticket systems, AI quietly raises the standard of everyday presentation. Sensor data can flag when common areas need attention, when consumables are running low, or when cleaning schedules should flex to actual usage rather than a fixed roster. The result is a building that simply feels better looked-after, consistently, without the manager having to be everywhere at once.</p>
-
-      <h3 class="article-h">Where Landed stands</h3>
-      <p>We do not see AI replacing the building manager. We see it removing the busywork so the manager can focus on judgement, relationships and the things that genuinely require a person. Our view is that the best-run Australian buildings of the next decade will pair smart technology with a local, hands-on team that's quick to respond and easy to deal with. That is exactly the balance we are building toward.</p>
-
-      <p class="article-sources"><strong>Sources:</strong> IBISWorld (Facilities Management Services in Australia, 2025); IMARC Group (Australia Facility Management Market 2025&ndash;2033); Australian Government energy.gov.au (HVAC energy breakdown); Jobs and Skills Australia (2025 Occupation Shortage List); research on predictive maintenance in Australian commercial buildings (ResearchGate, 2025); Green Building Council Australia / NABERS. Figures are accurate as at time of writing and provided for general information only.</p>
-    </article>
   </div>
 </section>
 
+<!-- IMAGE BAND -->
+<div class="img-band">
+  <img src="images/retail-display.jpg" alt="Retail store window display and glass shopfront">
+</div>
 
+<!-- POSITIONING -->
+<section id="whatitis" class="section">
+  <div class="wrap">
+    <div class="split-grid">
+    <div class="steps-head reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">What It Is</span></span>
+      <h2 class="sec-title">The clean your<br>staff cannot do</h2>
+      <p class="sec-lead">Most teams keep their floor presentable between customers. What they cannot do is get above the light fittings, pull out the shelving, or machine scrub the floor after close. That build-up is what customers notice, and it is exactly what we handle on a set schedule. We work across shopping centre tenancies, standalone shopfronts, showrooms, gyms, clinics and offices.</p>
+    </div>
+      <div class="split-img reveal rd1">
+        <img src="images/deep-clean-glass.jpg" alt="Detailed deep cleaning of a large glass surface" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- ARTICLE CTA -->
+<!-- WHAT IS INCLUDED -->
+<section id="included" class="section" style="background:var(--light-bg); border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="steps-head reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">What Is Included</span></span>
+      <h2 class="sec-title">Every spot, properly</h2>
+      <p class="sec-lead">A full deep clean of your site, front of house to back of house. Scope is tailored to your space, but this is what a standard programme covers.</p>
+    </div>
+    <div class="incl-grid">
+      <div class="incl-card reveal">
+        <h3>Above and out of reach</h3>
+        <ul>
+          <li>Light fittings, track lighting and above-light ledges</li>
+          <li>Air-conditioning vents, grilles and diffusers</li>
+          <li>Ceiling tiles, bulkheads and cornices</li>
+          <li>Sprinkler heads and smoke detectors</li>
+          <li>Exposed pipes, conduits and cable trays</li>
+          <li>High signage and light boxes</li>
+        </ul>
+      </div>
+      <div class="incl-card reveal rd1">
+        <h3>Behind and underneath</h3>
+        <ul>
+          <li>Behind and under shelving, racks and gondolas</li>
+          <li>Under counters, POS and till stations</li>
+          <li>Behind display cabinets and mirrors</li>
+          <li>Stockroom shelving and back walls</li>
+          <li>Skirting boards, edges and corners</li>
+          <li>Behind doors, hinges and door tracks</li>
+        </ul>
+      </div>
+      <div class="incl-card reveal rd2">
+        <h3>Glass, mirrors and display</h3>
+        <ul>
+          <li>Display cabinets inside and out</li>
+          <li>Shopfront glass and entry doors</li>
+          <li>Internal glass and partitions</li>
+          <li>Full-height and fitting room mirrors</li>
+          <li>Window tracks, sills and channels</li>
+        </ul>
+      </div>
+      <div class="incl-card reveal">
+        <h3>Floors</h3>
+        <ul>
+          <li>Machine scrubbing of hard floors</li>
+          <li>Vinyl strip, seal and polish</li>
+          <li>Carpet steam clean and hot water extraction</li>
+          <li>Edges and corners machines miss</li>
+          <li>Entry mats and thresholds</li>
+        </ul>
+      </div>
+      <div class="incl-card reveal rd1">
+        <h3>Fixtures and fit-out</h3>
+        <ul>
+          <li>Display units, racks and mannequins</li>
+          <li>Counters and benchtops</li>
+          <li>Chrome, brass and metal polishing</li>
+          <li>Timber and joinery detail</li>
+          <li>Handrails and high-touch points</li>
+        </ul>
+      </div>
+      <div class="incl-card reveal rd2">
+        <h3>Back of house</h3>
+        <ul>
+          <li>Stockrooms and storage</li>
+          <li>Staff rooms and kitchenettes</li>
+          <li>Staff amenities deep clean and sanitise</li>
+          <li>Fridges, microwaves and sinks</li>
+          <li>Bin and waste areas</li>
+        </ul>
+      </div>
+      <div class="incl-card reveal">
+        <h3>Specialist add-ons</h3>
+        <ul>
+          <li>Touchpoint sanitising and disinfection</li>
+          <li>Odour treatment</li>
+          <li>Upholstery and seating</li>
+          <li>Shopfront pressure washing</li>
+          <li>Post-fitout and post-renovation cleans</li>
+          <li>Peak season presentation cleans</li>
+          <li>End of lease and handover cleans</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREQUENCY PROGRAMME -->
+<section id="programme" class="section">
+  <div class="wrap">
+    <div class="steps-head reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">Your Programme</span></span>
+      <h2 class="sec-title">Set a schedule<br>that suits your site</h2>
+      <p class="sec-lead">Deep cleans work best on a rhythm. We set a frequency around your foot traffic, floor size and fit-out, then keep to it so the place never falls behind.</p>
+    </div>
+    <div class="freq-grid">
+      <div class="freq-card reveal">
+        <span class="freq-name">Fortnightly</span>
+        <div class="freq-line"></div>
+        <p>High-traffic stores, gyms, food-adjacent tenancies and large floorplates where build-up happens fast and presentation cannot slip.</p>
+      </div>
+      <div class="freq-card reveal rd1">
+        <span class="freq-tag">Most common</span>
+        <span class="freq-name">Monthly</span>
+        <div class="freq-line"></div>
+        <p>The right balance for most clothing and general retail, showrooms and offices. Steady foot traffic, a full reset every month, no surprises.</p>
+      </div>
+      <div class="freq-card reveal rd2">
+        <span class="freq-name">Quarterly</span>
+        <div class="freq-line"></div>
+        <p>Smaller boutiques, jewellery, clinics and low-footfall showrooms that need a periodic deep reset rather than constant attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="howwework" class="section" style="background:var(--light-bg); border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="steps-head reveal">
+      <span class="eyebrow"><span class="eyebrow-txt">How We Work</span></span>
+      <h2 class="sec-title">Around your trade,<br>not through it</h2>
+    </div>
+    <div class="work-grid">
+      <div class="work-card reveal">
+        <h3>After hours, always</h3>
+        <p>We work outside your trading hours, so a deep clean never costs you a sale or gets in a customer's way. Early mornings, late nights or overnight, whatever your site allows.</p>
+      </div>
+      <div class="work-card reveal rd1">
+        <h3>Shopping centre compliant</h3>
+        <p>Inducted, insured and working to centre requirements. We handle the access, timing and paperwork centre management asks for so you do not have to chase it.</p>
+      </div>
+      <div class="work-card reveal rd2">
+        <h3>The same local team</h3>
+        <p>A local Melbourne team that turns up to your site each visit. They learn your fit-out and your problem spots, so nothing gets missed and you are never re-explaining the job.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CTA -->
 <section id="enquire" class="section" style="background:var(--navy); padding:80px 0;">
   <div class="wrap" style="max-width:560px;">
     <div style="text-align:center; margin-bottom:30px;">
-      <h2 class="sec-title" style="color:#fff; margin-bottom:18px;">Building management,<br>done properly.</h2>
-      <p style="color:rgba(255,255,255,0.6); font-weight:300; max-width:520px; margin:0 auto; font-size:17px;">Want a local Melbourne team that pairs smart systems with genuine personal service? Leave your details and we'll call you back.</p>
+      <h2 class="sec-title" style="color:#fff; margin-bottom:18px;">Book a free walkthrough</h2>
+      <p style="color:rgba(255,255,255,0.6); font-weight:300; max-width:520px; margin:0 auto; font-size:17px;">Tell us about your site and we will put together a deep clean programme that fits it. Free walkthrough and quote, no obligation.</p>
     </div>
     <div class="hero-form-card">
       <form action="https://formspree.io/f/xgoqddbl" method="POST">
-        <input type="hidden" name="_subject" value="New website lead ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â AI page callback request">
-        <input type="hidden" name="source" value="AI & Building Management page form">
+        <input type="hidden" name="_subject" value="New website lead: Retail Deep Cleaning enquiry">
+        <input type="hidden" name="source" value="Retail Deep Cleaning page form">
         <h2>Speak to our team</h2>
         <p class="hfc-sub">A local Melbourne building manager will call you back &mdash; usually the same day. Free and no obligation.</p>
         <div class="fg"><label>Full Name</label><input type="text" name="name" placeholder="Your full name" required></div>
@@ -673,6 +882,17 @@
   </div>
 </section>
 
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var ans = item.querySelector('.faq-a');
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      ans.style.maxHeight = isOpen ? (ans.scrollHeight + 'px') : null;
+    });
+  });
+</script>
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -781,7 +1001,7 @@
       var label = btn ? btn.querySelector('span') : null;
       var originalText = label ? label.textContent : '';
       if (btn) { btn.disabled = true; }
-      if (label) { label.textContent = 'SendingÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦'; }
+      if (label) { label.textContent = 'SendingÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦'; }
       function reset() { if (btn) { btn.disabled = false; } if (label) { label.textContent = originalText; } }
 
       fetch(form.action, {
@@ -805,7 +1025,7 @@
           reset();
         }
       }).catch(function () {
-        alert('Network error ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â please call us on 0403 385 125.');
+        alert('Network error ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â please call us on 0403 385 125.');
         reset();
       });
     });
